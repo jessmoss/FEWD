@@ -1,0 +1,731 @@
+/*General Styles start here*/
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+header{
+	color: white;
+	background: navy;
+	padding: 20px;
+	width: 100%;
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+
+}
+
+
+main {
+	margin: 0 auto;
+	padding: 0;
+	background-color: white;
+	font-family: 'Raleway', sans-serif;
+	width: 900px;
+}
+
+
+
+h1{
+	margin: 0 0 5px 0;
+	font-size: 55;
+	padding: 0;
+	font-family: 'Raleway', sans-serif;
+	font-weight: normal;
+}
+
+h2{
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	font-weight: normal;
+}
+.top-head{
+	font-style: italic;
+	font-size: 20px;
+}
+
+/*General Styles end here*/
+
+/*Map Section Styles start here*/
+
+.map {
+	display: inline-block;
+	position: relative;
+	margin-top: 68px;
+	width: 600px;
+	height: 335px;
+	background-image: url("images/map.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	
+}
+
+.mapdot{
+	font-size: 6em;
+  	margin: 0;
+  	padding: 0;
+ 	background-color: navy;
+ 	border-radius: 15px;
+  	position: absolute;
+	font-family: serif;
+	width: 10px;
+	height: 10px;
+	cursor: pointer; 
+	cursor: hand;
+}
+
+.mapdot:hover{
+	background-color: #00B8E6;
+}
+
+.active{
+	background-color: #00B8E6;
+}
+
+/*DOT STYLES START HERE*/
+
+/*Add 77 to top, subtract 5 from right*/
+
+#washington-dot{
+	top: 141px;
+	right: 110px;
+}
+
+#baltimore-dot{
+	top: 132px;
+	right: 103px;
+}
+
+#boston-dot{
+	top: 87px;
+	right: 65px;
+}
+
+#nyy-dot{
+	top: 103px;
+	right: 87px;
+}
+
+#tampabay-dot{
+	top: 288px;
+	right: 138px;
+}
+
+#toronto-dot{
+	top: 79px;
+	right: 130px;
+}
+
+#atlanta-dot{
+	top: 218px;
+	right: 169px;
+}
+
+#miami-dot{
+	top: 305px;
+	right: 112px;
+}
+
+#nym-dot{
+	top: 108px;
+	right: 80px;
+}
+
+#philadelphia-dot{
+	top: 119px;
+	right: 95px;
+}
+
+#chicagows-dot{
+	top: 120px;
+	right: 206px;
+}
+
+#cleveland-dot{
+	top: 112px;
+	right: 150px;
+}
+
+#detroit-dot{
+	top: 106px;
+	right: 174px;
+}
+
+#kansascity-dot{
+	top: 153px;
+	right: 288px;
+}
+
+#minnesota-dot{
+	top: 92px;
+	right: 270px;
+}
+
+#chicagoc-dot{
+	top: 115px;
+	right: 215px;
+}
+
+#cincinnati-dot{
+	top: 142px;
+	right: 176px;
+}
+
+#milwaukee-dot{
+	top: 99px;
+	right: 218px;
+}
+
+#pittsburgh-dot{
+	top: 120px;
+	right: 130px;
+}
+
+#stlouis-dot{
+	top: 158px;
+	right: 245px;
+}
+
+#houston-dot{
+	top: 276px;
+	right: 290px;
+}
+
+#laa-dot{
+	top: 193px;
+	left: 72px;
+}
+
+#oakland-dot{
+	top: 141px;
+	left: 52px;
+}
+
+#seattle-dot{
+	top: 19px;
+	left: 80px;
+}
+
+#texas-dot{
+	top: 231px;
+	right: 314px;
+}
+
+#arizona-dot{
+	top: 209px;
+	left: 139px;
+}
+
+#colorado-dot{
+	top: 136px;
+	left: 199px;
+}
+
+#lad-dot{
+	top: 183px;
+	left: 63px;
+}
+
+#sandiego-dot{
+	top: 209px;
+	left: 90px;
+}
+
+#sanfran-dot{
+	top: 139px;
+	left: 44px;
+}
+
+
+/*Aside Styles Start here*/
+
+.rotating-carousel{
+	width: 298px;
+	float: right;
+	box-sizing: border-box;
+}
+
+/*Guide Styles Start Here*/
+
+#cardwrapper{
+	display: inline-block;
+	width: 100%;
+	margin-top: 35px;
+}
+
+.card{
+	display: none;
+}
+
+#washington-card{
+	display: inline-block;
+}
+
+.location{
+	font-family: 'Raleway', sans-serif;
+	font-size: 12px;
+}
+
+a{
+	text-decoration: none;
+	color: #00B8E6;
+}
+
+a:visited{
+	color: #00B8E6;
+}
+
+.card-pic{
+  	width: 100%;
+  	margin: 0px 0px 5px 0px;
+  	position: relative;
+  
+}
+
+.card-img{
+	max-width: 100%;
+	width: 299px;
+	height: auto;
+}
+
+.photocredit{
+	text-align: right;
+	display: inline-block;
+	position: absolute;
+	font-size: .5em;
+	right: 5px;
+	bottom: 0;
+}
+
+.card-info{
+	width: 100%;
+}
+
+h3{
+	margin: 10px 0 4px 0;
+  	font-family: 'Raleway', sans-serif;
+  	font-weight: normal;
+  	font-size: 20px;
+}
+
+h4{
+	margin: 0 0 4px 0;
+  	font-family: 'Raleway', sans-serif;
+  	font-weight: normal;
+  	font-size: 18px;
+}
+
+.stad-text{
+	color: black;
+	font-size: 16px;
+  	font-family: 'Raleway', sans-serif;
+  	margin: 10px 0 15px 0;
+}
+
+.button{
+	text-align: center;
+	height: 60px;
+	padding: 0;
+	margin: 0;
+}
+
+.button div, .button a{
+	width: 45%;
+	display: inline-block;
+	background: navy;
+	color: white;
+	height: 55px;
+  	font-family: 'Roboto Slab', serif;
+  	font-size: 18px;
+	text-align: center;
+	text-transform: uppercase;
+  	position: relative;
+  	text-decoration: none;
+  	border-radius: 5px;
+  	cursor: hand;
+}
+
+.button div:hover {
+	background-color: #00B8E6;
+}
+
+.button a:hover{
+	background-color: #00B8E6;
+}
+
+.more-info{
+	margin-right: 5%;
+}
+
+.scroll-cue{
+	font-size: .75em;
+	font-style: italic;
+	font-family: helvetica;
+}
+
+.button .yesbeen{
+	background-color: #00FF00;
+}
+
+.mapdot.yesbeen {
+  	background-color: #00FF00;
+}
+
+.mapdot.yesbeen:hover{
+	background-color: #00B8E6;
+}
+
+
+/*Guide Section Styles end here*/
+
+
+/*Stadium List Styles start here*/
+
+.stad-list{
+  	margin: 0;
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+ 	box-sizing: border-box;
+}
+
+.stad-list h2{
+	text-align: center;
+	color: black;
+}
+
+.stad-list h3{
+  	font-size: 1em;
+  	box-sizing: border-box;
+  	text-align: left;
+  	padding: 0;
+  	margin: 0;
+}
+
+p{
+	margin: 0;
+}
+
+.list-wrapper{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+  box-sizing: border-box;
+}
+
+.league-list{
+  width: 100%;
+  padding: 0;
+	margin: 0;
+  box-sizing: border-box;
+}
+
+
+.macro-column{
+	list-style-type: none;
+  display: inline-block;
+  width: 32%;
+  box-sizing: border-box;
+  padding: 0;
+  
+}
+
+.micro-column{
+	width: 100%;
+	list-style-type:none;
+	padding:0px;
+	margin:0px;
+  box-sizing: border-box;
+
+}
+
+.stack{
+  font-family: arial;
+  margin: 2%;
+  height: 30px;
+  border-radius: 5px;
+  background: white;
+  font-size: .75em;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+
+
+/*Totals Style starts here*/
+
+.ballpark-count{
+	width: 600px;
+	font-family: 'Raleway', sans-serif;
+	display: block;
+	height: auto;
+	box-sizing: border-box;
+	margin: 0px;
+	margin-top: 20px;
+	padding: 0px
+}
+
+.count-text{
+  display: inline-block;
+  float: left;
+  font-size: 55px;
+  /*height: 100%;*/
+  padding-left: 48px;
+  padding-right: 1%;
+  box-sizing: border-box;
+}
+
+.count-total{
+  display: inline-block;
+  float: left;
+  font-size: 55px;
+  /*height: 100%;*/
+  box-sizing: border-box;
+}
+
+.instrux{
+	font-size: 10px;
+	font-style: italic;
+	display: block;
+	padding-left: 51px;
+	position: absolute;
+	bottom: -6px;
+}
+
+/*Footer Styles Start Here*/
+
+footer{
+	font-size: .5em;
+	font-family: 'Raleway', sans-serif;
+	color: gray;
+	text-align: left;
+	width: 100%;
+	display: block;
+	position: fixed;
+	bottom: 0;
+	margin-left: 15px;
+}
+
+/*Footer Styles End Here*/
+
+/*RESPONSIVE STYLES START HERE*/
+
+@media screen and (max-width: 880px){
+
+	main{
+		width: 100%;
+	}
+
+	header{
+		margin-bottom: 30px;
+	}
+
+	h1{
+		font-size: 2em;
+	}
+
+	.map{
+		display: block;
+		margin: 10px auto;
+	}	
+
+	.instrux{
+		width: 600px;
+		margin: 0 auto;
+		padding: 0;
+		text-align: center;
+	
+	}
+
+	.rotating-carousel{
+		width: 600px;
+		display: block;
+		float: none;
+		box-sizing: border-box;
+		margin: 10px auto;
+	}
+
+	.rotating-carousel h2{
+		text-align: center;
+	}
+
+	.card{
+		width: 100%;
+	}
+
+	.card-pic{
+	  	width: 288px;
+	  	height: auto;
+	  	margin: 0px 0px 5px 0px;
+	  	position: relative;
+	  	display: inline-block;
+	  
+	}
+	
+	h2{
+		text-align: left;
+		margin-bottom: 30px;
+		margin-left: 0px;		
+	}
+
+	h3{
+		margin: 0 0 4px 0;
+	}
+
+	.card-info {
+		width: 300px;
+		display: inline-block;
+		height: auto;
+		vertical-align: top;
+		padding-left: 15px;
+	}
+
+	.stad-text {
+		font-size: 15px;
+		margin:0;
+	}
+	
+	.location{
+		padding-bottom: 5px;
+	}
+
+	.button{
+		padding: 10px;
+	}
+
+	.button div, .button a{
+		height: 46px;
+		font-size: 17px;
+	}
+
+	.ballpark-count{
+		margin: 30px auto 50px auto;
+	}
+
+	.count-wrapper{
+		text-align: center;
+	}
+
+	.count-text, .count-total{
+		float: none;
+	}
+
+	footer{
+		position: relative;
+	}
+
+}
+
+/*Responsive size info for mobile*/
+
+@media (max-width: 450px){
+
+.rotating-carousel{
+	width: 298px;
+	box-sizing: border-box;
+}
+
+#cardwrapper{
+	display: inline-block;
+	width: 100%;
+	margin-top: 35px;
+}
+
+	.card-pic{
+  	width: 100%;
+  	margin: 0px 0px 5px 0px;
+  	position: relative;
+  
+}
+
+.card-img{
+	max-width: 100%;
+	width: 299px;
+	height: auto;
+}
+
+.photocredit{
+	text-align: right;
+	display: inline-block;
+	position: absolute;
+	font-size: .5em;
+	right: 5px;
+	bottom: 0;
+}
+
+.card-info{
+	width: 100%;
+}
+
+h3{
+	margin: 10px 0 4px 0;
+  	font-family: 'Raleway', sans-serif;
+  	font-weight: normal;
+  	font-size: 20px;
+}
+
+h4{
+	margin: 0 0 4px 0;
+  	font-family: 'Raleway', sans-serif;
+  	font-weight: normal;
+  	font-size: 18px;
+}
+
+.stad-text{
+	color: black;
+	font-size: 16px;
+  	font-family: 'Raleway', sans-serif;
+  	margin: 10px 0 15px 0;
+}
+
+.button{
+	text-align: center;
+	height: 60px;
+	padding: 0;
+	margin: 0;
+}
+
+.button div, .button a{
+	width: 45%;
+	display: inline-block;
+	background: navy;
+	color: white;
+	height: 55px;
+  	font-family: 'Roboto Slab', serif;
+  	font-size: 18px;
+	text-align: center;
+	text-transform: uppercase;
+  	position: relative;
+  	text-decoration: none;
+  	border-radius: 5px;
+  	cursor: hand;
+}
+
+.more-info{
+	margin-right: 5%;
+}
+
+	.ballpark-count{
+		margin: 30px auto 50px auto;
+		width: 298px;
+	}
+
+	.count-wrapper{
+		text-align: center;
+	}
+
+	.count-text, .count-total{
+		float: left;
+		font-size: 24px;
+	}
+
+	footer{
+		position: relative;
+		float: left;
+		margin-top: 25px;
+	}
+
+}
+
+

@@ -1,0 +1,891 @@
+
+
+<html>
+
+<head>
+	<title>Major League Baseball Stadiums Map and Log</title>
+	<meta name="description" content="How many ballparks have you been to? Tally your total baseball stadium count with this interactive map.">
+	<meta property="og:title" content="Major League Baseball Stadiums Map and Log"> 
+	<meta property="og:image" content="images/Stadium Photos/nationals-park.jpg">
+	<meta property="og:description" content="How many ballparks have you been to? Tally your total baseball stadium count with this interactive map.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<link rel="stylesheet" href="css/style.css">
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59704830-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+	<header>
+		<div class="cover-image">
+		</div>
+		<div class="intro-block">
+			<div class="intro-text">
+			<h1>MLB<br>Baseball Stadiums</h1>
+			<div class="top-head">How many ballparks have you been to?</div>
+			</div>
+		</div>
+	</header>
+
+	<main>
+
+	<div class="wrap">
+
+		<h2 class="main-title">Stadium Map</h2>
+
+	<!--This section contains the map. It should stay fixed on the screen at all times when the user scrolls. -->
+
+	<div class="map"> 
+
+	<!--Map will be background with img divs positioned for dots -->
+		
+		<div class="mapdot" data-park="baltimore" id="baltimore-dot" title="Baltimore Orioles">
+		</div>
+		<div class="mapdot" data-park = "boston" id="boston-dot" title="Boston Red Sox">
+		</div>
+		<div class="mapdot" data-park ="nyy" id="nyy-dot" title="New York Yankees">
+		</div>
+		<div class="mapdot" data-park ="tampabay" id="tampabay-dot" title="Tampa Bay Rays">
+		</div>
+		<div class="mapdot" data-park ="toronto" id="toronto-dot" title="Toronto Blue Jays">
+		</div>
+		<div class="mapdot" data-park ="atlanta" id="atlanta-dot" title="Atlanta Braves">
+		</div>
+		<div class="mapdot" data-park ="miami" id="miami-dot" title="Miami Marlins">
+		</div>
+		<div class="mapdot" data-park = "nym" id="nym-dot" title="New York Mets">
+		</div>
+		<div class="mapdot" data-park = "philadelphia" id="philadelphia-dot" title="Philadelphia Phllies">
+		</div>
+		<div class="mapdot active" data-park = "washington" id="washington-dot" title="Washington Nationals">
+		</div>
+		<div class="mapdot" data-park = "chicagows" id="chicagows-dot" title="Chicago White Sox">
+		</div>
+		<div class="mapdot" data-park = "cleveland" id="cleveland-dot" title="Cleveland Indians">
+		</div>
+		<div class="mapdot" data-park = "detroit" id="detroit-dot" title="Detroit Tigers">
+		</div>
+		<div class="mapdot" data-park = "kansascity" id="kansascity-dot" title="Kansas City Royals">
+		</div>
+		<div class="mapdot" data-park = "minnesota" id="minnesota-dot" title="Minnesota Twins">
+		</div>
+		<div class="mapdot" data-park = "chicagoc" id="chicagoc-dot" title="Chicago Cubs">
+		</div>
+		<div class="mapdot" data-park = "cincinnati" id="cincinnati-dot" title="Cincinnati Reds">
+		</div>
+		<div class="mapdot" data-park = "milwaukee" id="milwaukee-dot" title="Milwaukee Brewers">
+		</div>
+		<div class="mapdot" data-park = "pittsburgh" id="pittsburgh-dot" title="Pittsburgh Pirates">
+		</div>
+		<div class="mapdot" data-park = "stlouis" id="stlouis-dot" title="St. Louis Cardinals">
+		</div>
+		<div class="mapdot" data-park = "houston" id="houston-dot" title="Houston Astros">
+		</div>
+		<div class="mapdot" data-park = "laa" id="laa-dot" title="Los Angeles Angels">
+		</div>
+		<div class="mapdot" data-park = "oakland" id="oakland-dot" title="Oakland A's">
+		</div>
+		<div class="mapdot" data-park = "seattle" id="seattle-dot" title="Seattle Mariners">
+		</div>
+		<div class="mapdot" data-park = "texas" id="texas-dot" title="Texas Rangers">
+		</div>
+		<div class="mapdot" data-park = "arizona" id="arizona-dot" title="Arizona Diamondbacks">
+		</div>
+		<div class="mapdot" data-park = "colorado" id="colorado-dot" title="Colorado Rockies">
+		</div>
+		<div class="mapdot" data-park = "lad" id="lad-dot" title="Los Angeles Dodgers">
+		</div>
+		<div class="mapdot" data-park = "sandiego" id="sandiego-dot" title="San Diego Padres">
+		</div>
+		<div class="mapdot" data-park = "sanfran" id="sanfran-dot" title="San Francisco Giants">
+		</div>
+		<!--<img class = "map" src="images/map.png">-->
+		<div class="instrux">Roll over the map dots for team names. Click a dot for stadium info.</div>
+	</div>
+
+	<!--This aside section contains two sections that rotate between info cards and stadium list when scrolled-->
+	<section class = "rotating-carousel">
+
+		<aside id="cardwrapper">
+
+		<!--This section contains the stadium cards; Washington will be displayed first, then cards change when user selects dot or list term-->
+
+			
+			<!--WASHINGTON CARD-->
+			<div class="card" id="washington-card">
+				<div class="card-pic">
+					<img class= "card-img" src="images/Stadium Photos/nationals-park.jpg">
+					<div class="photocredit"><a href="https://www.flickr.com/photos/83261600@N00/7596836876" target="_blank">The Q Speaks</a></div>
+				</div>
+				<div class="card-info">
+					<h3 class="team-name">Washington Nationals</h3>
+					<h4 class="stadium-name">Nationals Park</h4>
+					<div class="location"><i>Washington, DC </i> | <a class="mapquest" href="http://www.mapquest.com/us/district-of-columbia/stadiums-arenas-athletic-fields-washington/nationals-park-263175479" target="_blank"> Map</a></div>
+					<div class="stad-text">
+						<p>About a mile south of the Capitol Building, Nationals Park has done much to revitalize the Southeast D.C. neighborhood it anchors. </p> 
+					</div>
+					<div class="button">
+						<a class="more-info" id="washington-info" href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-nationals-park-washington-nationals-20882748" target="_blank">More<br />Info</a>
+						<div class="been-here" id="washington-been">I've Been Here!</div>
+					</div>
+				</div>
+			</div>
+			
+			<!--BALTIMORE CARD-->
+			<div class="card" id="baltimore-card">
+				<div class="card-pic">
+					<img class= "card-img" src="images/Stadium Photos/camden-yards.jpg"><br />
+					<div class="photocredit"><a href="https://www.flickr.com/photos/keithallison/8918202788" target="_blank">keithallison</a></div>
+				</div>
+				<div class="card-info">
+					<h3 class="team-name">Baltimore Orioles</h3>
+					<h4 class="stadium-name">Oriole Park at Camden Yards</h4>
+					<div class="location"><i>Baltimore, MD</i> | <a class = "mapquest" href = "http://www.mapquest.com/us/maryland/stadiums-arenas-athletic-fields-baltimore/oriole-park-at-camden-yards-266320126" target="_blank">Map</a></div>
+					<div class="stad-text">
+						<p>Next to Baltimore's busy Inner Harbor, Camden Yards started Major League Baseball's trend of retro-style urban stadiums.</p> 
+					</div>
+					<div class="button">
+						<a class="more-info" id="baltimore-info" href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-camden-yards-baltimore-orioles-20890117" target="_blank">More<br />Info</a>
+						<div class="been-here" id="baltimore-been">I've Been Here!</div>
+					</div>
+				</div>
+			</div>
+
+			<!--BOSTON CARD-->
+			<div class="card" id="boston-card">
+				<div class="card-pic">
+					<img class= "card-img" src="images/Stadium Photos/fenway-park.jpg">
+					<div class="photocredit"><a href="https://www.flickr.com/photos/35375520@N07/3599784525" target="_blank">Werner Kunz</a></div>
+				</div>
+				<div class="card-info">
+					<h3 class="team-name">Boston Red Sox</h3>
+					<h4 class="stadium-name">Fenway Park</h4>
+					<div class="location"><i>Boston, MA</i> | <a class="mapquest" href="http://www.mapquest.com/us/massachusetts/restaurants-boston/fenway-park-41856347" target="_blank"> Map</a></div>
+					<div class="stad-text">
+						<p>Fenway is the oldest stadium in the country, and generations of fans have filed through the turnstiles on Yawkey Way.</p> 
+					</div>
+					<div class="button">
+						<a class="more-info" id="boston-info" href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-fenway-park-red-sox-20883908" target="_blank">More<br />Info</a>
+						<div class="been-here" id="boston-been">I've Been Here!</div>
+					</div>
+				</div>
+			</div>
+
+			<!--NY YANKEES CARD-->
+			<div class="card" id="nyy-card">
+				<div class="card-pic">
+					<img class= "card-img" src="images/Stadium Photos/Yankee-stadium.jpg">
+					<div class="photocredit"><a href="https://www.flickr.com/photos/benborkowski/1029530366/in/photolist-2yYBvy-7YEKGA-65BYza-enFo4Y-5dA224-23Uo4G-fJYMoq-bYjSoY-e7S8Gp-M53q-6uxir8-enDDBd-nUk5wj-8rWRRb-9Hxuj4-fF6HCX-eE6ToP-8Vp9sQ-a37J3L-diPMtp-6wvDcD-8VXmnW-6uxcgB-c2A8MY-e7XNL5-eKeYFf-esUm8q-e7S8FT-e7XNHf-e7XSij-e7XSfC-8Vm6d6-bBFeM9-bQzVkc-86bMqz-9kpfr-6BDJXS-5WdyS-86bN1T-dfs7Xq-86bNwn-5e6Gvm-6PrYCT-6wvBFB-8Vp9Wh-6ux8ja-M4Wn-8Vp9qy-8Vm6Hr-8Vp9LS" target="_blank">benborkowski</a></div>
+				</div>
+				<div class="card-info">
+					<h3 class="team-name">New York Yankees</h3>
+					<h4 class="stadium-name">Yankee Stadium</h4>
+					<div class="location"><i>New York, NY</i> | <a class="mapquest" href="http://www.mapquest.com/us/new-york/stadiums-arenas-athletic-fields-bronx/yankee-stadium-277304334" target="_blank">Map</a></div>
+					<div class="stad-text">
+						<p>There may not be an intersection in America more clogged with baseball history than the Bronx's East 161st Street and River Avenue.</p> 
+					</div>
+					<div class="button">
+						<a class="more-info" id="nyy-info" href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-yankee-stadium-yankees-20881825" target="_blank">More<br />Info</a>
+						<div class="been-here" id="nyy-been">I've Been Here!</div>
+					</div>
+				</div>
+			</div>
+
+			<!--TAMPA BAY CARD-->
+			<div class="card" id="tampabay-card">
+				<div class="card-pic">
+					<img class= "card-img" src="images/Stadium Photos/tropicana-field.jpg">
+					<div class="photocredit"><a href="https://www.flickr.com/photos/bryce_edwards/4906876594" target="_blank">bryce_edwards</a></div>
+				</div>
+				<div class="card-info">
+					<h3 class="team-name">Tampa Bay Rays</h3>
+					<h4 class="stadium-name">Tropicana Field</h4>
+					<div class="location"><i>St. Petersburg, FL</i> | <a class="mapquest" href="http://www.mapquest.com/us/florida/stadiums-arenas-athletic-fields-st-petersburg/tropicana-field-4608570" target="_blank">Map</a></div>
+					<div class="stad-text">
+						<p>The domed "Trop" is close to downtown St. Pete, and sits near dozens of bars and restaurants.</p> 
+					</div>
+					<div class="button">
+						<a class="more-info" id="tampabay-info" href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-tropicana-field-tampa-bay-rays-20890158" target="_blank">More<br />Info</a>
+						<div class="been-here" id="tampabay-been">I've Been Here!</div>
+					</div>
+				</div>
+			</div>
+
+			<!--TORONTO CARD-->
+			<div class="card" id="toronto-card">
+				<div class="card-pic">
+					<img class= "card-img" src="images/Stadium Photos/rogers-centre.jpg">
+					<div class="photocredit"><a href="https://www.flickr.com/photos/48612126@N00/4855684486" target="_blank">udo.d</a></div>
+				</div>
+				<div class="card-info">
+					<h3 class="team-name">Toronto Blue Jays</h3>
+					<h4 class="stadium-name">Rogers Centre</h4>
+					<div class="location"><i>Toronto, ON</i> | <a class="mapquest" href="http://www.mapquest.com/ca/ontario/stadiums-arenas-athletic-fields-toronto/rogers-centre-25198923" target="_blank">Map</a></div>
+					<div class="stad-text">
+						<p>The Rogers Centre sits beside the CN Tower and sandwiched between Toronto's waterfront and the entertainment district.</p> 
+					</div>
+					<div class="button">
+						<a class="more-info" id="toronto-info" href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-rogers-centre-toronto-blue-jays-20890154" target="_blank">More<br />Info</a>
+						<div class="been-here" id="toronto-been">I've Been Here!</div>
+					</div>
+				</div>
+			</div>
+
+			<!--ATLANTA CARD-->
+			<div class="card" id="atlanta-card">
+				<div class="card-pic">
+					<img class= "card-img" src="images/Stadium Photos/Turner-field.jpg">
+					<div class="photocredit"><a href="https://www.flickr.com/photos/davidberkowitz/3675692675/" target="_blank">davidberkowitz</a></div>
+				</div>
+				<div class="card-info">
+					<h3 class="team-name">Atlanta Braves</h3>
+					<h4 class="stadium-name">Turner Field</h4>
+					<div class="location"><i>Atlanta, GA</i> | <a class="mapquest" href="http://www.mapquest.com/us/georgia/stadiums-arenas-athletic-fields-atlanta/turner-field-3806159" target="_blank">Map</a></div>
+					<div class="stad-text">
+						<p>"The Ted" is just a mile from the Georgia Capitol Building, but there aren't many restuarnts within walking distance.</p> 
+					</div>
+					<div class="button">
+						<a class="more-info" id="atlanta-info" href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-turner-field-atlanta-braves-20890118" target="_blank">More<br />Info</a>
+						<div class="been-here" id="atlanta-been">I've Been Here!</div>
+					</div>
+				</div>
+			</div>
+
+			<!--MIAMI CARD-->
+			<div class="card" id="miami-card">
+				<div class="card-pic">
+					<img class= "card-img" src="images/Stadium Photos/marlins-park.jpg">
+					<div class="photocredit"><a href="https://www.flickr.com/photos/77396461@N08/7087927325" target="_blank">Roberto Coquis</a></div>
+				</div>
+				<div class="card-info">
+					<h3 class="team-name">Miami Marlins</h3>
+					<h4 class="stadium-name">Marlins Park</h4>
+					<div class="location"><i>Miami, FL</i> | <a class="mapquest" href="http://www.mapquest.com/us/florida/stadiums-arenas-athletic-fields-miami/marlins-park-264815450" target="_blank">Map</a></div>
+					<div class="stad-text">
+						<p>From the left field nightclub to the swimming pool, you won't find a ballpark with more glitz and glamour than Marlins Park.</p> 
+					</div>
+					<div class="button">
+						<a class="more-info" id="miami-info" href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-marlins-park-miami-marlins-20889316" target="_blank">More<br />Info</a>
+						<div class="been-here" id="miami-been">I've Been Here!</div>
+					</div>
+				</div>
+			</div>
+
+			<!--NY METS CARD-->
+			<div class="card" id="nym-card">
+				<div class="card-pic">
+					<img class= "card-img" src="images/Stadium Photos/citi-field.jpg">
+					<div class="photocredit"><a href="https://www.flickr.com/photos/ekilby/5812876069" target="_blank">ekilby</a></div>
+				</div>
+				<div class="card-info">
+					<h3 class="team-name">New York Mets</h3>
+					<h4 class="stadium-name">Citi Field</h4>
+					<div class="location"><i>Flushing, NY</i> | <a class="mapquest" href="http://www.mapquest.com/us/new-york/restaurants-flushing/citi-field-stadium-262326541" target="_blank">Map</a></div>
+					<div class="stad-text">
+						<p>Citi Field is a virtual island in a sea of parking lots, but it's also one of the best food stadiums in the majors.</p> 
+					</div>
+					<div class="button">
+						<a class="more-info" id="nym-info" href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-citi-field-mets-20883889" target="_blank">More<br />Info</a>
+						<div class="been-here" id="nym-been">I've Been Here!</div>
+					</div>
+				</div>
+			</div>
+
+			<!--PHILADELPHIA CARD-->
+			<div class="card" id="philadelphia-card">
+				<div class="card-pic">
+					<img class= "card-img" src="images/Stadium Photos/citizens-bank-park.jpg">
+					<div class="photocredit"><a href="https://www.flickr.com/photos/smswigart/7207357922" target="_blank">smswigart</a></div>
+				</div>
+				<div class="card-info">
+					<h3 class="team-name">Philadelphia Phillies</h3>
+					<h4 class="stadium-name">Citizens Bank Park</h4>
+					<div class="location"><i>Philadelphia, PA</i> | <a class="mapquest" href="http://www.mapquest.com/us/pennsylvania/banks-philadelphia/citizens-bank-park-264671844" target="_blank">Map</a></div>
+					<div class="stad-text">
+						<p>Citizens Bank Park is nestled in South Philadelphia's sports complex, amid a sea of parking lots.</p> 
+					</div>
+					<div class="button">
+						<a class="more-info" id="philadelphia-info" href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-citizens-bank-park-philadelphia-phillies-20890112" target="_blank">More<br />Info</a>
+						<div class="been-here" id="philadelphia-been">I've Been Here!</div>
+					</div>
+				</div>
+			</div>
+
+			
+
+			<!--CHICAGO WHITE SOX CARD-->
+			<div class="card" id="chicagows-card">
+				<div class="card-pic">
+					<img class= "card-img" src="images/Stadium Photos/us-cellular-field.jpg">
+				</div>
+				<div class="card-info">
+					<h3 class="team-name">Chicago White Sox</h3>
+					<h4 class="stadium-name">U.S. Cellular Field</h4>
+					<div class="location"><i>Chicago, IL</i> | <a class="mapquest" href="http://www.mapquest.com/us/illinois/stadiums-arenas-athletic-fields-chicago/us-cellular-field-7736598" target="_blank"> Map</a></div>
+					<div class="stad-text">
+						<p>The Cell isn't historic as Wrigley, but a game here is arguably a more authentically Chicago experience than a Cubs game.</p> 
+					</div>
+					<div class="button">
+						<a class="more-info" id="chicagows-info" href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-us-cellular-field-white-sox-20882805" target="_blank">More<br />Info</a>
+						<div class="been-here" id="chicagows-been">I've Been Here!</div>
+					</div>
+				</div>
+			</div>
+
+			<!--CLEVELAND CARD-->
+			<div class="card" id="cleveland-card">
+				<div class="card-pic">
+					<img class= "card-img" src="images/Stadium Photos/progressive-field.jpg">
+					<div class="photocredit"><a href="https://www.flickr.com/photos/edrost88/8737541948" target="_blank">edrost88</a></div>
+				</div>
+				<div class="card-info">
+					<h3 class="team-name">Cleveland Indians</h3>
+					<h4 class="stadium-name">Progressive Field</h4>
+					<div class="location"><i>Cleveland, OH</i> | <a class="mapquest" href="http://www.mapquest.com/us/ohio/restaurants-cleveland/progressive-field-22600941" target="_blank"> Map</a></div>
+					<div class="stad-text">
+						<p>On game days a crowd palpable with Tribe fever pours in to "The Jake" from all corners of the Gateway neighborhood.</p> 
+					</div>
+					<div class="button">
+						<a class="more-info" id="cleveland-info" href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-progressive-field-cleveland-indians-20890144" target="_blank">More<br />Info</a>
+						<div class="been-here" id="cleveland-been">I've Been Here!</div>
+					</div>
+				</div>
+			</div>
+
+			<!--DETROIT CARD-->
+			<div class="card" id="detroit-card">
+				<div class="card-pic">
+					<img class= "card-img" src="images/Stadium Photos/Comerica-Park.jpg">
+					<div class="photocredit"><a href="https://www.flickr.com/photos/harshlight/10866245923" target="_blank">harshlight</a></div>
+				</div>
+				<div class="card-info">
+					<h3 class="team-name">Detroit Tigers</h3>
+					<h4 class="stadium-name">Comerica Park</h4>
+					<div class="location"><i>Detroit, MI</i> | <a class="mapquest" href="http://www.mapquest.com/us/michigan/stadiums-arenas-athletic-fields-detroit/comerica-park-265743729" target="_blank"> Map</a></div>
+					<div class="stad-text">
+						<p>On game day the streets surrounding Comerica Park hum with people en route to downtown Detroit restaurants and bars.</p> 
+					</div>
+					<div class="button">
+						<a class="more-info" id="detroit-info" href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-comerica-park-detroit-tigers-20890136" target="_blank">More<br />Info</a>
+						<div class="been-here" id="detroit-been">I've Been Here!</div>
+					</div>
+				</div>
+			</div>
+
+			<!--KANSAS CITY CARD-->
+			<div class="card" id="kansascity-card">
+				<div class="card-pic">
+					<img class= "card-img" src="images/Stadium Photos/kauffman-stadium.jpg">
+					<div class="photocredit"><a href="https://www.flickr.com/photos/ian_munroe/3645151929" target="_blank">ian_munroe</a></div>
+				</div>
+				<div class="card-info">
+					<h3 class="team-name">Kansas City Royals</h3>
+					<h4 class="stadium-name">Kauffman Stadium</h4>
+					<div class="location"><i>Kansas City, MO</i> | <a class="mapquest" href="http://www.mapquest.com/us/missouri/stadiums-arenas-athletic-fields-kansas-city/kauffman-stadium-8142411" target="_blank"> Map</a></div>
+					<div class="stad-text">
+						<p>"The K" is recognized throughout professional sports as one of the most visually pleasing ballparks in the majors.</p> 
+					</div>
+					<div class="button">
+						<a class="more-info" id="kansascity-info" href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-kauffman-stadium-royals-20890116" target="_blank">More<br />Info</a>
+						<div class="been-here" id="kansascity-been">I've Been Here!</div>
+					</div>
+				</div>
+			</div>
+
+			<!--MINNESOTA CARD-->
+			<div class="card" id="minnesota-card">
+				<div class="card-pic">
+					<img class= "card-img" src="images/Stadium Photos/target-field.jpg">
+					<div class="photocredit"><a href="https://www.flickr.com/photos/drumminhands/4757642061" target="_blank">drumminhands</a></div>
+				</div>
+				<div class="card-info">
+					<h3 class="team-name">Minnesota Twins</h3>
+					<h4 class="stadium-name">Target Field</h4>
+					<div class="location"><i>Minneapolis, MN</i> | <a class="mapquest" href="http://www.mapquest.com/us/minnesota/stadiums-arenas-athletic-fields-minneapolis/target-field-265748728" target="_blank"> Map</a></div>
+
+					<div class="stad-text">
+						<p>Built with sustainability in mind, Target Field has been recognized as the greenest ballpark in America.</p> 
+					</div>
+					<div class="button">
+						<a class="more-info" id="minnesota-info" href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-target-field-minnesota-twins-20890157" target="_blank">More<br />Info</a>
+						<div class="been-here" id="minnesota-been">I've Been Here!</div>
+					</div>
+				</div>
+			</div>
+
+			<!--CHICAGO CUBS CARD-->
+			<div class="card" id="chicagoc-card">
+				<div class="card-pic">
+					<img class= "card-img" src="images/Stadium Photos/wrigley-field.jpg">
+					<div class="photocredit"><a href="https://www.flickr.com/photos/urbanhoustonian/6915480662" target="_blank">urbanhoustonian</a></div>
+				</div>
+				<div class="card-info">
+					<h3 class="team-name">Chicago Cubs</h3>
+					<h4 class="stadium-name">Wrigley Field</h4>
+					<div class="location"><i>Chicago, IL</i> | <a class="mapquest" href="http://www.mapquest.com/us/illinois/stadiums-arenas-athletic-fields-chicago/wrigley-field-7730670" target="_blank"> Map</a></div>
+					<div class="stad-text">
+						<p>Wrigley Field, which celebrated its 100th anniversary in 2014, is the gold standard of atmospheric, old neighborhood ballparks.</p> 
+					</div>
+					<div class="button">
+						<a class="more-info" id="chicagoc-info" href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-wrigley-field-chicago-cubs-20882661" target="_blank">More<br />Info</a>
+						<div class="been-here" id="chicagoc-been">I've Been Here!</div>
+					</div>
+				</div>
+			</div>
+
+			<!--CINCINNATI CARD-->
+			<div class="card" id="cincinnati-card">
+				<div class="card-pic">
+					<img class= "card-img" src="images/Stadium Photos/great-american-ball-park.jpg">
+					<div class="photocredit"><a href="https://www.flickr.com/photos/mrlaugh/3564912744" target="_blank">mrlaugh</a></div>
+				</div>
+				<div class="card-info">
+					<h3 class="team-name">Cincinnati Reds</h3>
+					<h4 class="stadium-name">Great American Ballpark</h4>
+					<div class="location"><i>Cincinnati, OH</i> | <a class="mapquest" href="http://www.mapquest.com/us/ohio/restaurants-cincinnati/great-american-ball-park-5905199" target="_blank"> Map</a></div>
+					<div class="stad-text">
+						<p>Great American Ball Park might not have the architectural allure of a Camden Yards, but it honors the franchise's history at every turn.</p> 
+					</div>
+					<div class="button">
+						<a class="more-info" id="cincinnati-info" href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-great-american-ball-park-reds-20890141" target="_blank">More<br />Info</a>
+						<div class="been-here" id="cincinnati-been">I've Been Here!</div>
+					</div>
+				</div>
+			</div>
+
+			<!--MILWAUKEE CARD-->
+			<div class="card" id="milwaukee-card">
+				<div class="card-pic">
+					<img class= "card-img" src="images/Stadium Photos/Miller-park.jpg">
+					<div class="photocredit"><a href="https://www.flickr.com/photos/bryce_edwards/2673796622" target="_blank">bryce_edwardsz</a></div>
+				</div>
+				<div class="card-info">
+					<h3 class="team-name">Milwaukee Brewers</h3>
+					<h4 class="stadium-name">Miller Park</h4>
+					<div class="location"><i>Milwaukee, WI</i> | <a class="mapquest" href="http://www.mapquest.com/us/wisconsin/stadiums-arenas-athletic-fields-milwaukee/miller-park-265869110" target="_blank"> Map</a></div>
+					<div class="stad-text">
+						<p>Miller Park is about 10 minutes from downtown Milwaukee, and is home to one of baseball's biggest tailgates.</p> 
+					</div>
+					<div class="button">
+						<a class="more-info" id="milwaukee-info" href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-miller-park-milwaukee-brewers-20890125" target="_blank">More<br />Info</a>
+						<div class="been-here" id="milwaukee-been">I've Been Here!</div>
+					</div>
+				</div>
+			</div>
+
+			<!--PITTSBURGH CARD-->
+			<div class="card" id="pittsburgh-card">
+				<div class="card-pic">
+					<img class= "card-img" src="images/Stadium Photos/PNC-Park.jpg">
+					<div class="photocredit"><a href="https://www.flickr.com/photos/dgaken/14594423673" target="_blank">dgaken</a></div>
+				</div>
+				<div class="card-info">
+					<h3 class="team-name">Pittsburgh Pirates</h3>
+					<h4 class="stadium-name">PNC Park</h4>
+					<div class="location"><i>Pittsburgh, PA</i> | <a class="mapquest" href="http://www.mapquest.com/us/pennsylvania/stadiums-arenas-athletic-fields-pittsburgh/pnc-park-265817193" target="_blank"> Map</a></div>
+					<div class="stad-text">
+						<p>Located in Pittsburgh's North Shore neighborhood, PNC Park offers great views of the city's skyline.</p> 
+					</div>
+					<div class="button">
+						<a class="more-info" id="pittsburgh-info" href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-pnc-park-pittsburgh-pirates-20890142" target="_blank">More<br />Info</a>
+						<div class="been-here" id="pittsburgh-been">I've Been Here!</div>
+					</div>
+				</div>
+			</div>
+
+			<!--ST LOUIS CARD-->
+			<div class="card" id="stlouis-card">
+				<div class="card-pic">
+					<img class= "card-img" src="images/Stadium Photos/Busch-stadium.jpg">
+					<div class="photocredit"><a href="https://www.flickr.com/photos/stefan_ogrisek/14566201513" target="_blank">stefan_ogrisek</a></div>
+				</div>
+				<div class="card-info">
+					<h3 class="team-name">St. Louis Cardinals</h3>
+					<h4 class="stadium-name">Busch Stadium</h4>
+					<div class="location"><i>St. Louis, MO</i> | <a class="mapquest" href="http://www.mapquest.com/us/missouri/stadiums-arenas-athletic-fields-saint-louis/busch-stadium-8018211" target="_blank"> Map</a></div>
+					<div class="stad-text">
+						<p>Located in the shadows of the famous Arch, Busch Stadium is the hub of downtown St. Louis, and ground zero for Cardinals Nation.</p> 
+					</div>
+					<div class="button">
+						<a class="more-info" id="stlouis-info" href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-busch-stadium-st-louis-cardinals-20890132" target="_blank">More<br />Info</a>
+						<div class="been-here" id="stlouis-been">I've Been Here!</div>
+					</div>
+				</div>
+			</div>
+
+			<!--HOUSTON CARD-->
+			<div class="card" id="houston-card">
+				<div class="card-pic">
+					<img class= "card-img" src="images/Stadium Photos/Minute-Maid-Park.jpg">
+					<div class="photocredit"><a href="https://www.flickr.com/photos/atbaker/288803361" target="_blank">atbaker</a></div>
+				</div>
+				<div class="card-info">
+					<h3 class="team-name">Houston Astros</h3>
+					<h4 class="stadium-name">Minute Maid Park</h4>
+					<div class="location"><i>Houston, TX</i> | <a class="mapquest" href="http://www.mapquest.com/us/texas/stadiums-arenas-athletic-fields-houston/minute-maid-park-9327021" target="_blank"> Map</a></div>
+					<div class="stad-text">
+						<p>Located in downtown Houston, Minute Maid Park has a distinctive boxy shape and a retractable roof.</p> 
+					</div>
+					<div class="button">
+						<a class="more-info" id="houston-info" href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-minute-maid-park-astros-20890126" target="_blank">More<br />Info</a>
+						<div class="been-here" id="houston-been">I've Been Here!</div>
+					</div>
+				</div>
+			</div>
+
+			<!--LOS ANGELES ANGELS CARD-->
+			<div class="card" id="laa-card">
+				<div class="card-pic">
+					<img class= "card-img" src="images/Stadium Photos/Angel-Stadium.jpg">
+					<div class="photocredit"><a href="https://www.flickr.com/photos/15132846@N00/5651019539" target="_blank">15132846@N00</a></div>
+				</div>
+				<div class="card-info">
+					<h3 class="team-name">Los Angeles Angels</h3>
+					<h4 class="stadium-name">Angel Stadium of Anaheim</h4>
+					<div class="location"><i>Anaheim, CA</i> | <a class="mapquest" href="http://www.mapquest.com/us/california/stadiums-arenas-athletic-fields-anaheim/angel-stadium-of-anaheim-11498148" target="_blank"> Map</a></div>
+					<div class="stad-text">
+						<p>Sandwiched between I-5 and SR-57, Angel Stadium is the fourth oldest ballpark in the league.</p> 
+					</div>
+					<div class="button">
+						<a class="more-info" id="laa-info" href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-angel-stadium-anaheim-20890129" target="_blank">More<br />Info</a>
+						<div class="been-here" id="laa-been">I've Been Here!</div>
+					</div>
+				</div>
+			</div>
+
+			<!--OAKLAND CARD-->
+			<div class="card" id="oakland-card">
+				<div class="card-pic">
+					<img class= "card-img" src="images/Stadium Photos/Oco-Coliseum.jpg">
+					<div class="photocredit"><a href="https://www.flickr.com/photos/bryce_edwards/253009720" target="_blank">bryce_edwards</a></div>
+				</div>
+				<div class="card-info">
+					<h3 class="team-name">Oakland A's</h3>
+					<h4 class="stadium-name">O.co Coliseum</h4>
+					<div class="location"><i>Oakland, CA</i> | <a class="mapquest" href="http://www.mapquest.com/us/california/cafes-oakland/oco-coliseum-270457193" target="_blank"> Map</a></div>
+					<div class="stad-text">
+						<p>Oakland fans come to O.co for the baseball, not for the ballpark or neighborhood amenities.</p> 
+					</div>
+					<div class="button">
+						<a class="more-info" id="oakland-info" href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-o-co-coliseum-oakland-athletics-20889186" target="_blank">More<br />Info</a>
+						<div class="been-here" id="oakland-been">I've Been Here!</div>
+					</div>
+				</div>
+			</div>
+
+			<!--SEATTLE CARD-->
+			<div class="card" id="seattle-card">
+				<div class="card-pic">
+					<img class= "card-img" src="images/Stadium Photos/Safeco-Field.jpg">
+					<div class="photocredit"><a href="https://www.flickr.com/photos/elias_daniel/15645149675" target="_blank">elias_daniel</a></div>
+				</div>
+				<div class="card-info">
+					<h3 class="team-name">Seattle Mariners</h3>
+					<h4 class="stadium-name">Safeco Field</h4>
+					<div class="location"><i>Seattle, WA</i> | <a class="mapquest" href="http://www.mapquest.com/us/washington/stadiums-arenas-athletic-fields-seattle/safeco-field-12593228" target="_blank"> Map</a></div>
+					<div class="stad-text">
+						<p>Located in the industrial SoDo neigbhorhood, "The Safe" has a retractable roof to keep out that Seattle rain.</p> 
+					</div>
+					<div class="button">
+						<a class="more-info" id="seattle-info" href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-safeco-field-seattle-mariners-20890156" target="_blank">More<br />Info</a>
+						<div class="been-here" id="seattle-been">I've Been Here!</div>
+					</div>
+				</div>
+			</div>
+
+			<!--TEXAS CARD-->
+			<div class="card" id="texas-card">
+				<div class="card-pic">
+					<img class= "card-img" src="images/Stadium Photos/globe-life-park.jpg">
+					<div class="photocredit"><a href="https://www.flickr.com/photos/kstatelibrarian/7528759714" target="_blank">kstatelibrarian</a></div>
+				</div>
+				<div class="card-info">
+					<h3 class="team-name">Texas Rangers</h3>
+					<h4 class="stadium-name">Globe Life Park</h4>
+					<div class="location"><i>Arlington, TX</i> | <a class="mapquest" href="http://www.mapquest.com/us/texas/stadiums-arenas-athletic-fields-arlington/globe-life-park-in-arlington-265846691" target="_blank"> Map</a></div>
+					<div class="stad-text">
+						<p>Although "The Ballpark" doesn't benefit from an urban neighborhood, it is one of the anchors of an entertainment-focused district in Arlington.</p> 
+					</div>
+					<div class="button">
+						<a class="more-info" id="texas-info" href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-globe-life-park-texas-rangers-20890140" target="_blank">More<br />Info</a>
+						<div class="been-here" id="texas-been">I've Been Here!</div>
+					</div>
+				</div>
+			</div>
+
+			<!--ARIZONA CARD-->
+			<div class="card" id="arizona-card">
+				<div class="card-pic">
+					<img class= "card-img" src="images/Stadium Photos/chase-field.jpg">
+					<div class="photocredit"><a href="https://www.flickr.com/photos/clintus/13551261244" target="_blank">clintus</a></div>
+				</div>
+				<div class="card-info">
+					<h3 class="team-name">Arizona Diamondbacks</h3>
+					<h4 class="stadium-name">Chase Field</h4>
+					<div class="location"><i>Phoenix, AZ</i> | <a class="mapquest" href="http://www.mapquest.com/us/arizona/stadiums-arenas-athletic-fields-phoenix/chase-field-23740134" target="_blank"> Map</a></div>
+					<div class="stad-text">
+						<p>In downtown Phoenix, Chase Field has a retractable roof to keep out the Arizona heat. It also has a swimming pool in right field.</p> 
+					</div>
+					<div class="button">
+						<a class="more-info" id="arizona-info" href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-chase-field-arizona-diamondbacks-20888978" target="_blank">More<br />Info</a>
+						<div class="been-here" id="arizona-been">I've Been Here!</div>
+					</div>
+				</div>
+			</div>
+
+			<!--COLORADO CARD-->
+			<div class="card" id="colorado-card">
+				<div class="card-pic">
+					<img class= "card-img" src="images/Stadium Photos/Coors-field.jpg">
+					<div class="photocredit"><a href="https://www.flickr.com/photos/lhanaphotography/6056046883" target="_blank">lhanaphotography</a></div>
+				</div>
+				<div class="card-info">
+					<h3 class="team-name">Colorado Rockies</h3>
+					<h4 class="stadium-name">Coors Field</h4>
+					<div class="location"><i>Denver, CO</i> | <a class="mapquest" href="http://www.mapquest.com/us/colorado/restaurants-denver/coors-field-265679598" target="_blank"> Map</a></div>
+					<div class="stad-text">
+						<p>Coors Field is an anchor in Denver's LoDo neighborhood, and on game days the streets flood with fans decked in purple.</p> 
+					</div>
+					<div class="button">
+						<a class="more-info" id="denver-info" href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-coors-field-colorado-rockies-20874409" target="_blank">More<br />Info</a>
+						<div class="been-here" id="denver-been">I've Been Here!</div>
+					</div>
+				</div>
+			</div>
+
+			<!--LOS ANGELES DODGERS CARD-->
+			<div class="card" id="lad-card">
+				<div class="card-pic">
+					<img class= "card-img" src="images/Stadium Photos/Dodger-Stadium2.jpg">
+					<div class="photocredit"><a href="https://www.flickr.com/photos/wlscience/4834802559" target="_blank">wlscience</a></div>
+				</div>
+				<div class="card-info">
+					<h3 class="team-name">Los Angeles Dodgers</h3>
+					<h4 class="stadium-name">Dodger Stadium</h4>
+					<div class="location"><i>Los Angeles, CA</i> | <a class="mapquest" href="http://www.mapquest.com/us/california/stadiums-arenas-athletic-fields-los-angeles/dodger-stadium-265660113" target="_blank"> Map</a></div>
+					<div class="stad-text">
+						<p>Dodger Stadium inhabits its own little world, where instead of a skyscraper backdrop you gaze out at the hulking San Gabriel Mountains.</p> 
+					</div>
+					<div class="button">
+						<a class="more-info" id="lad-info" href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-dodger-stadium-dodgers-20883324" target="_blank">More<br />Info</a>
+						<div class="been-here" id="lad-been">I've Been Here!</div>
+					</div>
+				</div>
+			</div>
+
+			<!--SAN DIEGO CARD-->
+			<div class="card" id="sandiego-card">
+				<div class="card-pic">
+					<img class= "card-img" src="images/Stadium Photos/petco-park.jpg">
+					<div class="photocredit"><a href="https://www.flickr.com/photos/dirkhansen/4989391792" target="_blank">dirkhansen</a></div>
+				</div>
+				<div class="card-info">
+					<h3 class="team-name">San Diego Padres</h3>
+					<h4 class="stadium-name">Petco Park</h4>
+					<div class="location"><i>San Diego, CA</i> | <a class="mapquest" href="http://www.mapquest.com/us/california/restaurants-san-diego/petco-park-23998770" target="_blank"> Map</a></div>
+					<div class="stad-text">
+						<p>Made of stucco and sandstone with lots of exposed steel, Petco Park's modern and airy architecture sets it apart from other ballparks.</p> 
+					</div>
+					<div class="button">
+						<a class="more-info" id="sandiego-info" href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-petco-park-san-diego-padres-20890121" target="_blank">More<br />Info</a>
+						<div class="been-here" id="sandiego-been">I've Been Here!</div>
+					</div>	
+				</div>
+			</div>
+
+			<!--SAN FRANCISCO CARD-->
+			<div class="card" id="sanfran-card">
+				<div class="card-pic">
+					<img class= "card-img" src="images/Stadium Photos/att-park.jpg">
+					<div class="photocredit"><a href="https://www.flickr.com/photos/harshlight/7911376094" target="_blank">harshlight</a></div>
+				</div>
+				<div class="card-info">
+					<h3 class="team-name">San Francisco Giants</h3>
+					<h4 class="stadium-name">AT&amp;T Park</h4>
+					<div class="location"><i>San Fracisco, CA</i> | <a class="mapquest" href="http://www.mapquest.com/us/california/stadiums-arenas-athletic-fields-san-francisco/att-park-282884648" target="_blank"> Map</a></div>
+					<div class="stad-text">
+						<p>Set on the San Francisco Bay, AT&amp;T Park is a nod to the classic brick ballparks of yesteryear.</p> 
+					</div>
+					<div class="button">
+						<a class="more-info" id="sanfrancisco-info" href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-att-park-san-francisco-giants-20890111" target="_blank">More<br />Info</a>
+						<div class="been-here" id="sanfrancisco-been">I've Been Here!</div>
+					</div>
+				</div>
+			</div>
+			
+		<!--END CARDWRAPPER ASIDE-->
+		</aside>
+
+	<!--END ROTATING-CAROUSEL SECTION-->
+	</section>
+			
+
+	</div>
+	</main>
+
+<!--TOTAL BALLPARK COUNTER-->
+	<div class="ballpark-count">
+		<div class="count-wrapper">
+			<div class="count-text">Total Ballparks Visited:</div>
+			<div class="count-total">0</div>
+		</div>
+	</div>	
+
+<!--STADIUM INDEX-->
+	<div class="nat-league-ballparks">
+		<h2>National League Stadiums</h2>
+		<div class="stad-full-list">
+			<ul class="list">
+				<li>
+					<p class="team-list">Atlanta Braves</p>
+					<p><a href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-turner-field-atlanta-braves-20890118" target="_blank">Turner Field</a></p>	
+				</li>
+				<li>
+					<p class="team-list">Miami Marlins</p>
+					<p><a href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-marlins-park-miami-marlins-20889316" target="_blank">Marlins Park</a></p>
+				</li>
+				<li>
+					<p class="team-list">New York Mets</p>
+					<p><a href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-citi-field-mets-20883889" target="_blank">Citi Field</a></p>
+				</li>
+				<li>
+					<p class="team-list">Philadelphia Phillies</p>
+					<p><a href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-citizens-bank-park-philadelphia-phillies-20890112" target="_blank">Citizens Bank Park</a></p>
+				</li>
+				<li>		
+					<p class="team-list">Washington Nationals</p>
+					<p><a href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-nationals-park-washington-nationals-20882748" target="_blank">Nationals Park</a></p>
+				</li>
+				<li>
+					<p class="team-list">Chicago Cubs</p>
+					<p><a href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-wrigley-field-chicago-cubs-20882661" target="_blank">Wrigley Field</a></p>
+				</li>			
+				<li>
+					<p class="team-list">Cincinnati Reds</p>
+					<p><a href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-great-american-ball-park-reds-20890141" target="_blank">Great American Ball Park</a></p>
+				</li>					
+				<li>
+					<p class="team-list">Milwaukee Brewers</p>
+					<p><a href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-miller-park-milwaukee-brewers-20890125" target="_blank">Miller Park</a></p>
+				</li>					
+				<li>
+					<p class="team-list">Pittsburgh Pirates</p>
+					<p><a href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-pnc-park-pittsburgh-pirates-20890142" target="_blank">PNC Park</a></p>
+				</li>					
+				<li>
+					<p class="team-list">St. Louis Cardinals</p>
+					<p><a href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-busch-stadium-st-louis-cardinals-20890132" target="_blank">Busch Stadium</a></p>
+				</li>					
+				<li>
+					<p class="team-list">Arizona Diamondbacks</p>
+					<p><a href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-chase-field-arizona-diamondbacks-20888978" target="_blank">Chase Field</a></p>
+				</li>		
+				<li>
+					<p class="team-list">Colorado Rockies</p>
+					<p><a href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-coors-field-colorado-rockies-20874409" target="_blank">Coors Field</a></p>
+				</li>
+				<li>
+					<p class="team-list">Los Angeles Dodgers</p>
+					<p><a href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-dodger-stadium-dodgers-20883324" target="_blank">Dodger Stadium</a></p>
+				</li>
+				<li>
+					<p class="team-list">San Diego Padres</p>
+					<p><a href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-petco-park-san-diego-padres-20890121" target="_blank">Petco Park</a></p>
+				</li>					
+				<li>
+					<p class="team-list">San Francisco Giants</p>
+					<p><a href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-att-park-san-francisco-giants-20890111" target="_blank">AT&amp;T Park</a></p>
+				</li>					
+			</ul>
+		</div>
+	</div>
+	<div class="am-league-ballparks">
+		<h2>American League Stadiums</h2>
+		<div class="stad-full-list">
+			<ul class="list">
+				<li>
+					<p class="team-list">Baltimore Orioles</p>
+					<p><a href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-camden-yards-baltimore-orioles-20890117" target="_blank">Oriole Park at Camden Yards</a></p>	
+				</li>
+				<li>
+					<p class="team-list">Boston Red Sox</p>
+					<p><a href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-fenway-park-red-sox-20883908" target="_blank">Fenway Park</a></p>
+				</li>
+				<li>
+					<p class="team-list">New York Yankees</p>
+					<p><a href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-yankee-stadium-yankees-20881825" target="_blank">Yankee Stadium</a></p>
+				</li>
+				<li>
+					<p class="team-list">Tampa Bay Rays</p>
+					<p><a href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-tropicana-field-tampa-bay-rays-20890158" target="_blank">Tropicana Field</a></p>
+				</li>
+				<li>		
+					<p class="team-list">Toronto Blue Jays</p>
+					<p><a href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-rogers-centre-toronto-blue-jays-20890154" target="_blank">Rogers Centre</a></p>
+				</li>
+				<li>
+					<p class="team-list">Chicago White Sox</p>
+					<p><a href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-us-cellular-field-white-sox-20882805" target="_blank">U.S. Cellular Field</a></p>
+				</li>			
+				<li>
+					<p class="team-list">Cleveland Indians</p>
+					<p><a href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-progressive-field-cleveland-indians-20890144" target="_blank">Progressive Field</a></p>
+				</li>					
+				<li>
+					<p class="team-list">Detroit Tigers</p>
+					<p><a href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-comerica-park-detroit-tigers-20890136" target="_blank">Comerica Park</a></p>
+				</li>					
+				<li>
+					<p class="team-list">Kansas City Royals</p>
+					<p><a href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-kauffman-stadium-royals-20890116" target="_blank">Kauffman Stadium</a></p>
+				</li>					
+				<li>
+					<p class="team-list">Minnesota Twins</p>
+					<p><a href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-target-field-minnesota-twins-20890157" target="_blank">Target Field</a></p>
+				</li>					
+				<li>
+					<p class="team-list">Houston Astros</p>
+					<p><a href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-minute-maid-park-astros-20890126" target="_blank">Minute Maid Park</a></p>
+				</li>		
+				<li>
+					<p class="team-list">Los Angeles Angels</p>
+					<p><a href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-angel-stadium-anaheim-20890129" target="_blank">Angel Stadium of Anaheim</a></p>
+				</li>
+				<li>
+					<p class="team-list">Oakland A's</p>
+					<p><a href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-o-co-coliseum-oakland-athletics-20889186" target="_blank">O.co Coliseum</a></p>
+				</li>
+				<li>
+					<p class="team-list">Seattle Mariners</p>
+					<p><a href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-safeco-field-seattle-mariners-20890156" target="_blank">Safeco Field</a></p>
+				</li>					
+				<li>
+					<p class="team-list">Texas Rangers</p>
+					<p><a href="http://www.mapquest.com/travel/articles/baseball-ballpark-guide-globe-life-park-texas-rangers-20890140" target="_blank">Globe Life Park</a></p>
+				</li>					
+			</ul>
+		</div>
+	</div>
+	
+	<footer>
+		<p>Copyright 2014 Jess Moss</p>
+	</footer>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
+</html>

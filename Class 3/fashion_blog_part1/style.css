@@ -1,0 +1,117 @@
+/* Header Styles */
+
+header nav{
+	font-size: 20px;
+	width: 100%;
+	margin-bottom: 40px;
+}
+
+header nav a{
+	color: #EEEEEE;
+	margin-right: 10px;
+	text-decoration: underline;
+}
+
+/* End Header Styles */
+
+/* Main Content Styles */
+
+body{
+	font-family: "lato", serif;
+	margin-left: 0px;
+	padding: 5%;
+	width: 80%;
+	border-left: solid 5px #EEEEEE;
+}
+
+article{
+	border-bottom: solid 2px #EEEEEE; 
+	margin-bottom: 47px;
+}
+
+h1{
+	font-weight: lighter;
+	font-size: 42px;
+}
+
+h1 a{
+	color: #DD0000;
+}
+
+h2{
+	font-weight: lighter;
+	font-size: 30px;
+	margin-top: 10px;
+}
+
+h2 a{
+	color: black;
+}
+
+a{ 
+	text-decoration: none;
+
+ }
+
+a:hover{
+	color: #AA0000;
+}
+
+
+h3{
+	color: #DDDDDD;
+	font-weight: lighter;
+	font-size: 28px;
+}
+
+article p:first-letter{
+color: #DDDDDD; 
+float: left; 
+font-size: 85px;  
+line-height: 75px;
+padding-right: 8px; 
+padding-top: 4px; 
+font-stretch: semi-expanded;
+}
+/*Is there a way to set this so that it automatically formats the first letter of an aritcle first <p> as the drop cap? */
+
+p{
+	line-height: 1.5;
+}
+
+.top{
+	font-size: 24px;
+}
+
+div{
+	
+}
+
+h4{
+	text-align: right;
+	font-size: 16px;
+}
+
+h4 a{
+	color: #DD0000;
+}
+
+/* End Main Content Styles */
+
+/* Footer Styles */
+
+footer{
+	font-size: 16px;
+text-align: left;
+color: #CCCCCC;
+}
+
+
+footer a{
+	text-decoration: none;
+	color: #DD0000;
+	padding-right: none;
+	margin-right: none;
+}
+
+/* Footer Styles */

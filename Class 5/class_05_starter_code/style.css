@@ -1,0 +1,172 @@
+html{
+
+	border-left: solid 5px #EEEEEE;
+}
+
+/* Header Styles */
+
+header{
+	width: 100%
+	float: left;
+}
+
+.topnav {
+	font-size: 20px;
+	width: 100%;
+	margin-bottom: 40px;
+}
+
+.topnav ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.topnav li {
+	float: left;
+	margin-right: 1px;
+}
+
+.topnav a{
+	background: black;
+	color: white;
+	padding: 0.5em 1em;
+	text-decoration: none;
+}
+
+.header{
+	display: inline;
+}
+
+.tagline{
+	font-size: 14px;
+	margin: 0px 15px;
+	color: #BBBBBB;
+}
+/* End Header Styles */
+
+/* Main Content Styles */
+
+.main{
+	width: 70%;
+	float: left;
+	box-sizing: border-box;
+	padding: 3%;
+
+}
+
+.wrapper{
+	margin: 0 auto;
+	padding: 5%;
+	width: 80%;
+}
+
+body{
+	font-family: "lato", serif;
+	
+}
+
+article{
+	border-bottom: solid 2px #EEEEEE; 
+	margin-bottom: 47px;
+}
+
+h1{
+	font-weight: lighter;
+	font-size: 32px;
+}
+
+h1 a{
+	color: #DD0000;
+}
+
+h2{
+	font-weight: lighter;
+	font-size: 30px;
+	margin-top: 10px;
+}
+
+h2 a{
+	color: black;
+}
+
+a{ 
+	text-decoration: none;
+
+ }
+
+a:hover{
+	color: #AA0000;
+}
+
+
+h3{
+	color: #DDDDDD;
+	font-weight: lighter;
+	font-size: 28px;
+}
+
+article p:first-letter{
+color: #DDDDDD; 
+float: left; 
+font-size: 85px;  
+line-height: 75px;
+padding-right: 8px; 
+padding-top: 4px; 
+font-stretch: semi-expanded;
+}
+
+p{
+	line-height: 1.5;
+}
+
+
+div{
+	
+}
+
+h4{
+	text-align: right;
+	font-size: 16px;
+}
+
+h4 a{
+	color: #DD0000;
+}
+
+/* End Main Content Styles */
+
+/*Aside Styles*/
+aside{
+	width: 30%;
+	text-align: left;
+	float: right;
+	font-size: 12px;
+}
+
+aside h4{
+	text-align: left;
+}
+
+/*End Aside Styles*/
+
+/* Footer Styles */
+
+/*Question: When (if ever) should you do <footer>text</footer> in the HTML rather than a class=Footer? Last week I had things in a footer tag and styled with targeted footer styles, but I think to float things I need to have the footer in a div=class"footer"?*/
+
+footer{
+	font-size: 16px;
+	text-align: left;
+	color: #CCCCCC;
+	width: 100%;
+	clear: both;
+}
+
+
+footer a {
+	text-decoration: none;
+	color: #DD0000;
+	padding-right: none;
+	margin-right: none;
+}
+
+/* End Footer Styles */

@@ -1,0 +1,8 @@
+current_temperature = get_temperature_from_sensor
+target_temperature = 72
+
+repeat forever:
+  if current_temperature >= (target_temperature + 2)
+    turn_off_heat
+  if current_temperature < target_temperature
+    turn_on_heat

@@ -1,0 +1,860 @@
+/*General Styles start here*/
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%; /* This is needed :( */
+}
+
+/*header{
+	color: white;
+	background: navy;
+	padding: 20px;
+	width: 100%;
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+}*/
+
+
+header {
+	  height: 100%;
+	  min-height: 100%; 
+	  width: 100%;
+	  margin: 0 auto;
+	  position: relative;
+	  color: white;
+	  }
+	  
+.intro-block {
+    
+   	margin: 11% auto;
+    text-align: center;
+    bottom: 100px;
+    width: 375px;
+    height: 375px;
+    vertical-align: middle;
+    display: block;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border: white solid thin;
+  } 
+
+.intro-text{
+	vertical-align: middle;
+	margin: 15%;
+	width: 375px;
+	height: 375px;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.cover-image {
+  background-image: url("../images/ballpark-lights.jpg");
+  background-position: center;
+  background-size: cover;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1; /* The magic of fixed parallax header*/
+}
+
+
+main {
+	margin: 0 auto;
+	padding: 0;
+	background-color: white;
+	font-family: 'Merriweather', sans-serif;
+	width: 100%;
+	height: 650px;
+}
+
+.wrap{
+	width: 900px;
+	margin: 0 auto;
+	display: block;
+	height: auto;
+}
+
+h1{
+	margin: 0 auto;
+	font-size: 42;
+	padding: 0;
+	font-family: 'Oswald', sans-serif;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+h2{
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+	font-weight: normal;
+	font-size: 42px;
+	text-transform: uppercase;
+}
+
+.top-head{
+	font-style: italic;
+	margin-top: 10px;
+	font-size: 1em;
+	font-family: 'Merriweather', serif;
+}
+
+p{
+	margin: 0;
+}
+
+/*General Styles end here*/
+
+.main-title{
+	color: black;
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 30px;
+}
+
+/*Map Section Styles start here*/
+
+.map {
+	display: inline-block;
+	position: relative;
+	margin-top: 68px;
+	width: 600px;
+	height: 335px;
+	background-image: url("../images/map.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	
+}
+
+.mapdot{
+	font-size: 6em;
+  	margin: 0;
+  	padding: 0;
+ 	background-color: #595C5A;
+ 	border-radius: 15px;
+  	position: absolute;
+	font-family: serif;
+	width: 10px;
+	height: 10px;
+	cursor: pointer; 
+	cursor: hand;
+}
+
+.mapdot:hover{
+	background-color: #FBEDBA;
+}
+
+.active{
+	background-color: #E9B07B;
+}
+
+/*DOT STYLES START HERE*/
+
+/*Add 77 to top, subtract 5 from right*/
+
+#washington-dot{
+	top: 141px;
+	right: 110px;
+}
+
+#baltimore-dot{
+	top: 132px;
+	right: 103px;
+}
+
+#boston-dot{
+	top: 87px;
+	right: 65px;
+}
+
+#nyy-dot{
+	top: 103px;
+	right: 87px;
+}
+
+#tampabay-dot{
+	top: 288px;
+	right: 138px;
+}
+
+#toronto-dot{
+	top: 79px;
+	right: 130px;
+}
+
+#atlanta-dot{
+	top: 218px;
+	right: 169px;
+}
+
+#miami-dot{
+	top: 305px;
+	right: 112px;
+}
+
+#nym-dot{
+	top: 108px;
+	right: 80px;
+}
+
+#philadelphia-dot{
+	top: 119px;
+	right: 95px;
+}
+
+#chicagows-dot{
+	top: 120px;
+	right: 206px;
+}
+
+#cleveland-dot{
+	top: 112px;
+	right: 150px;
+}
+
+#detroit-dot{
+	top: 106px;
+	right: 174px;
+}
+
+#kansascity-dot{
+	top: 153px;
+	right: 288px;
+}
+
+#minnesota-dot{
+	top: 92px;
+	right: 270px;
+}
+
+#chicagoc-dot{
+	top: 115px;
+	right: 215px;
+}
+
+#cincinnati-dot{
+	top: 142px;
+	right: 176px;
+}
+
+#milwaukee-dot{
+	top: 99px;
+	right: 218px;
+}
+
+#pittsburgh-dot{
+	top: 120px;
+	right: 130px;
+}
+
+#stlouis-dot{
+	top: 158px;
+	right: 245px;
+}
+
+#houston-dot{
+	top: 276px;
+	right: 290px;
+}
+
+#laa-dot{
+	top: 193px;
+	left: 72px;
+}
+
+#oakland-dot{
+	top: 141px;
+	left: 52px;
+}
+
+#seattle-dot{
+	top: 19px;
+	left: 80px;
+}
+
+#texas-dot{
+	top: 231px;
+	right: 314px;
+}
+
+#arizona-dot{
+	top: 209px;
+	left: 139px;
+}
+
+#colorado-dot{
+	top: 136px;
+	left: 199px;
+}
+
+#lad-dot{
+	top: 183px;
+	left: 63px;
+}
+
+#sandiego-dot{
+	top: 209px;
+	left: 90px;
+}
+
+#sanfran-dot{
+	top: 139px;
+	left: 44px;
+}
+
+
+/*Aside Styles Start here*/
+
+.rotating-carousel{
+	width: 298px;
+	float: right;
+	box-sizing: border-box;
+}
+
+/*Guide Styles Start Here*/
+
+#cardwrapper{
+	display: inline-block;
+	width: 100%;
+	margin-top: 35px;
+}
+
+.card{
+	display: none;
+}
+
+#washington-card{
+	display: inline-block;
+}
+
+.location{
+	font-family: 'Merriweather', sans-serif;
+	font-size: 14px;
+}
+
+a{
+	text-decoration: none;
+	color: #7B7F7D;
+}
+
+a:visited{
+	color: #7B7F7D;
+}
+
+a:hover{
+	color: #E9B07B;
+}
+
+.card-pic{
+  	width: 100%;
+  	margin: 0px 0px 5px 0px;
+  	position: relative;
+  
+}
+
+.card-img{
+	max-width: 100%;
+	width: 299px;
+	height: auto;
+}
+
+.photocredit{
+	text-align: right;
+	display: inline-block;
+	position: absolute;
+	font-family: 'Merriweather', sans-serif;
+	font-size: .5em;
+	right: 5px;
+	bottom: 0;
+}
+
+.card-info{
+	width: 100%;
+}
+
+h3{
+	margin: 10px 0 1px 0;
+  	font-family: 'Oswald', sans-serif;
+  	font-weight: normal;
+  	text-transform: uppercase;
+  	font-size: 20px;
+}
+
+h4{
+	margin: 0 0 4px 0;
+  	font-family: 'Oswald', sans-serif;
+  	font-weight: normal;
+  	font-size: 18px;
+}
+
+.stad-text{
+	color: #595C5A;
+	font-size: 16px;
+  	font-family: 'Merriweather', sans-serif;
+  	margin: 10px 0 15px 0;
+}
+
+.button{
+	text-align: center;
+	height: 60px;
+	padding: 0;
+	margin: 0;
+}
+
+.button div, .button a{
+	width: 45%;
+	display: inline-block;
+	background: black;
+	color: white;
+	height: 55px;
+  	font-family: 'Roboto Slab', serif;
+  	font-size: 18px;
+	text-align: center;
+	text-transform: uppercase;
+  	position: relative;
+  	text-decoration: none;
+  	border-radius: 5px;
+  	cursor: hand;
+}
+
+.button div:hover {
+	background-color: #7B7F7D;
+}
+
+.button a:hover{
+	background-color: #7B7F7D;
+}
+
+.more-info{
+	margin-right: 5%;
+}
+
+.scroll-cue{
+	font-size: .75em;
+	font-style: italic;
+	font-family: helvetica;
+}
+
+.button .yesbeen{
+	background-color: #E9B07B;
+}
+
+.mapdot.yesbeen {
+  	background-color: #E9B07B;
+}
+
+.mapdot.yesbeen:hover{
+	background-color: #FBEDBA;
+}
+
+
+/*Guide Section Styles end here*/
+
+
+/*Stadium List Styles start here*/
+
+
+
+/*Totals Style starts here*/
+
+.ballpark-count{
+	width: 100%;
+	font-family: 'Oswald', sans-serif;
+	background: #595C5A;
+	color: white;
+	display: block;
+	height: 160px;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 0px
+}
+
+.count-text{
+  display: inline-block;
+  /*height: 100%;*/
+  padding-right: 1%;
+  box-sizing: border-box;
+}
+
+.count-wrapper{
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 42px;
+	padding-top: 50px;
+}
+
+.count-total{
+  display: inline-block;
+  /*height: 100%;*/
+  box-sizing: border-box;
+}
+
+.instrux{
+	font-size: 10px;
+	font-style: italic;
+	display: block;
+	padding-left: 51px;
+	position: absolute;
+	bottom: -6px;
+}
+
+/*Index Styles Start Here*/
+.nat-league-ballparks, .am-league-ballparks{
+	margin: 20px auto 0px auto;
+	height: 700px;
+	color: white;
+}
+
+.stad-full-list{
+	width: 75%;
+	margin: 0 auto;
+	height: 560px;
+	background-color: rgba(255, 255, 255, 0.7 );
+}
+
+ul{
+	text-decoration: none;
+	color: black;
+	font-family: 'Merriweather' serif;
+	font-size: 16px;
+}
+
+li{
+	display: inline-block;
+	width: 48%;
+	margin: 10px auto;
+}
+
+.team-list{
+	font-weight: bold;
+}
+
+/*Slider Styles Start Here*/
+
+.slider-wrap{
+	height: 300px;
+	width: 75%;
+	margin: 0 auto;
+	background-color: white;
+}
+
+/*Footer Styles Start Here*/
+
+footer{
+	font-size: .5em;
+	font-family: 'Raleway', sans-serif;
+	color: gray;
+	text-align: left;
+	width: 100%;
+	display: block;
+	position: fixed;
+	bottom: 0;
+	margin-left: 15px;
+}
+
+/*Footer Styles End Here*/
+
+/*RESPONSIVE STYLES START HERE*/
+
+@media screen and (max-width: 880px){
+
+	main{
+		width: 100%;
+		height: auto;
+	}
+
+	header{
+		margin-bottom: 30px;
+		padding-top: 50px;
+	}
+
+	.intro-block {
+		width: 325px;
+		height: 325px;
+	}
+
+	.intro-text {
+		width: 100%;
+		margin: 10% 17%;
+	}
+
+	h1{
+		font-size: 2em;
+	}
+
+	.wrap{
+		width: 100%;
+	}
+
+	.map{
+		display: block;
+		margin: 10px auto;
+	}	
+
+	.instrux{
+		width: 600px;
+		margin: 0 auto;
+		padding: 0;
+		text-align: center;
+	
+	}
+
+	.rotating-carousel{
+		width: 600px;
+		display: block;
+		float: none;
+		box-sizing: border-box;
+		margin: 10px auto 0 auto;
+	}
+
+	.rotating-carousel h2{
+		text-align: center;
+	}
+
+	.card{
+		width: 100%;
+	}
+
+	.card-pic{
+	  	width: 288px;
+	  	height: auto;
+	  	margin: 0px 0px 5px 0px;
+	  	position: relative;
+	  	display: inline-block;
+	  
+	}
+	
+	h2{
+		margin: 30px auto;
+		font-size: 36px;		
+	}
+
+	h3{
+		margin: 0 0 4px 0;
+	}
+
+	.card-info {
+		width: 300px;
+		display: inline-block;
+		height: auto;
+		vertical-align: top;
+		padding-left: 15px;
+	}
+
+	.stad-text {
+		font-size: 13px;
+		margin:0;
+	}
+	
+	.location{
+		padding-bottom: 5px;
+	}
+
+	.button{
+		padding: 6px;
+	}
+
+	.button div, .button a{
+		height: 46px;
+		font-size: 15px;
+	}
+
+	.ballpark-count{
+		margin: 0px auto 50px auto;
+		height: 125px;
+	}
+
+	.count-wrapper{
+		text-align: center;
+		padding-top: 35px;
+		font-size: 36px;
+	}
+
+	.count-text, .count-total{
+		float: none;
+	}
+
+	.nat-league-ballparks, .am-league-ballparks {
+		margin: 20px auto 0px auto;
+		height: auto;
+		color: white;
+	}
+
+	footer{
+		position: relative;
+	}
+
+}
+
+/*Responsive size info for mobile*/
+
+@media (max-width: 450px){
+
+header{
+	padding-top: 0px;
+}
+
+.intro-block {
+	border: none;
+	padding: 2%;
+	width: 100%;
+	height: auto;
+}
+
+.intro-text{
+	margin: 0 auto;
+}
+
+.top-head{
+	margin: 10px;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+main {
+	height: auto;
+}
+
+.wrap{
+	width: 100%;
+	height: auto;
+	background: white;
+}
+
+.rotating-carousel{
+	width: 298px;
+	box-sizing: border-box;
+}
+
+#cardwrapper{
+	display: inline-block;
+	width: 100%;
+	margin-top: 35px;
+}
+
+.card-pic{
+  	width: 100%;
+  	margin: 0px 0px 5px 0px;
+  	position: relative;
+  
+}
+
+.card-img{
+	max-width: 100%;
+	width: 299px;
+	height: auto;
+}
+
+.photocredit{
+	text-align: right;
+	display: inline-block;
+	position: absolute;
+	font-size: .5em;
+	right: 5px;
+	bottom: 0;
+}
+
+.card-info{
+	width: 100%;
+}
+
+h3{
+	margin: 10px 0 4px 0;
+  	font-family: 'Oswald', sans-serif;
+  	font-weight: normal;
+  	font-size: 20px;
+}
+
+h4{
+	margin: 0 0 4px 0;
+  	font-family: 'Oswald', sans-serif;
+  	font-weight: normal;
+  	font-size: 18px;
+}
+
+.stad-text{
+	color: black;
+	font-size: 14px;
+  	font-family: 'Merriweather', sans-serif;
+  	margin: 5px 0 10px 0;
+}
+
+.button{
+	text-align: center;
+	height: 60px;
+	padding: 0;
+	margin: 0;
+}
+
+.button div, .button a{
+	width: 45%;
+	display: inline-block;
+	background: black;
+	color: white;
+	height: 45px;
+  	font-family: 'Roboto Slab', serif;
+  	font-size: 16px;
+	text-align: center;
+	text-transform: uppercase;
+  	position: relative;
+  	text-decoration: none;
+  	border-radius: 5px;
+  	cursor: hand;
+}
+
+.button div:hover {
+	background-color: #7B7F7D;
+}
+
+.button a:hover{
+	background-color: #7B7F7D;
+}
+
+
+.more-info{
+	margin-right: 5%;
+}
+
+.ballpark-count{
+	margin: -10px auto 30px auto;
+	width: 100%;
+	height: 90px;
+}
+
+.count-wrapper{
+	text-align: center;
+	padding: 15px;
+}
+
+.count-text, .count-total{
+	font-size: 23px;
+}
+
+.stad-full-list {
+	width: 100%;
+	margin: 0 auto;
+	height: auto;
+}
+
+li {
+	width: 100%;
+}
+
+footer{
+		position: relative;
+		float: left;
+		margin-top: 25px;
+	}
+
+}
+
+

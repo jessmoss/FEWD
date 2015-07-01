@@ -1,0 +1,48 @@
+MY PSEUDOCODE
+
+hand_in_fist = rock
+two_fingers = scissors
+hand_flat = paper
+win = rock_hits_scissors or scissors_cut_paper or paper_covers_rock
+
+if rock + scissors
+	then rock_hits_scissors
+else if scissors + paper
+	then scissors_cut_paper
+else if paper + rock
+	then paper_covers_rock
+else 
+	then repeat
+
+end
+
+SOLUTION PSEUDOCODE
+
+available moves = "rock", "paper", "scissors"
+ <!--This is a set of data... a list-->
+you_win_text = "You win, good job!"
+
+<!--then could add something like: if language = "spanish" / you_win_text = "tu ganas" and then you wouldn't have to change it all over the program-->
+
+user_move = get move from user <!--pseudocode way of saying "get a move from the user"->
+computer_move = generate move <!--different piece of code that randomly picks a move-->
+
+<!--error handling: users will do the wrong thing...-->
+if user_move is not in available_moves
+	then print "That's not a valid move!"
+else if user_move == computer_move
+	then print "It's a tie!"
+else if user_move == "rock" and computer_move == "scissors"
+	then print you_win_text
+else if user_move == "scissors" and computer_move == "paper"
+	then print you_win_text
+else if user_move == "paper" and computer_move == "rock"
+	then print you_win_text
+else
+	then print "You lose... sorry :P"
+
+
+
+
+
+

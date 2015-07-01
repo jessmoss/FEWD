@@ -1,0 +1,204 @@
+/*HTML Styles Start Here*/
+
+
+/*HTML Styles Stop Here*/
+
+/*BODY Styles Start Here*/
+
+body{
+	width: 800px;
+	margin: 0 auto;
+	color: black;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+
+}
+
+h3{
+	font-weight: bold;
+	font-size: 28px;
+}
+
+.btn{
+	background: #C6C6C6;
+	border-radius: 5px;
+	box-shadow: 0px 3px 1px #9E9E9E;
+	display: inline-block;
+	font-family: "Oswald", sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	height: 50px;
+	line-height: 2.5;
+	margin: 15px auto;
+	text-align: center;
+	text-transform: uppercase;
+	width: 94%;
+
+}
+
+
+/*BODY Styles End Here*/
+
+/*HEADER Styles Start Here*/
+
+.top{
+	background: black;
+	border-bottom: solid #FBFF00 3px;
+	height: 120px;
+	font-family: "Source Sans Pro", sans-serif;
+}
+
+.top h1{
+	color: #FBFF00;
+	font-family: "Merriweather", serif;
+	margin:0px;
+	padding: 15px 0px 0px 22px;
+	text-align: left;
+	letter-spacing: -1px;
+}
+
+.top nav{
+	text-align: right;
+	margin: 13px;
+	font-size: 22px;
+}
+
+.top a{
+	color: white;
+	padding: 9px;
+}
+
+.find-links{
+	color: white;
+	font-family: "Oswald", sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.bottom{
+	background: #C6C6C6;
+	height: 75px;
+}
+
+.tagline{
+	font-style: italic;
+	margin: 0 auto;
+	text-align: center;
+	font-family: "Merriweather", serif;
+	line-height: 3;
+	font-size: 26px;
+}
+
+.underline{
+	border-bottom: solid 3px #F7FF00;
+	}
+
+.strike{
+	text-decoration: line-through;
+}
+
+.yellow{
+	text-decoration-color: #FBFF00;
+
+}
+
+.gray{
+	color: #999999;
+}
+
+/*HEADER Styles End Here*/
+
+
+/*HERO Styles Start Here*/
+
+.hero {
+	background-image: url('../images/coworking.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 450px;
+}
+
+.hero > div {
+	background-color: rgba(255,255,255,.6);
+	box-shadow: 0px 0px 10px #B1B1B1;
+	float: right;
+	font-family: "Source Sans Pro", serif;
+	margin-right: 20px;
+	margin-top: 20px;
+	padding: 20px;
+	width: 275px;
+
+}
+
+#hero-h3{
+	font-size: 30px;
+	margin: 18px auto 0px auto;
+	width: 94%;
+}
+
+.hero p{
+	font-size: 20px;
+	line-height: 1.5;
+	margin: 0px 0px 0px 0px;
+	padding: 9px;
+	width: 94%;
+}
+
+.btn.btn-primary {
+	background: #F7FF00;
+	box-shadow: 0px 3px 1px #C5CC00;
+	margin-left: 9px;
+	/*Why when I style the margins in this box as auto is it different/not aligned? The H3 and Button seem to align along the same "auto" format, but the p has a different idea of what "auto" is and floats on its own...*/
+}
+
+/*HERO Styles End Here*/
+
+
+/*SECTION Styles Start Here*/
+
+.column{
+	width: 30%;
+	display: inline-block;
+	margin: 1%;
+	padding: 3px;
+	vertical-align: top;
+	border-right: #E9E9E9 solid 1px;
+}
+
+.last{
+	border: none;
+}
+
+section{
+	font-family: "Source Sans Pro", sans-serif;
+	margin: 25px 0px 35px 0px;
+	font-size: 20px;
+}
+
+.section-head{
+	margin: 0 auto;
+	font-family: "Merriweather", serif;
+}
+
+.p-column{
+	width: 90%;
+	line-height: 1.5;
+	margin: 5px;
+
+}
+
+/*SECTION Styles End Here*/
+
+
+/*FOOTER Styles Start Here*/
+
+footer{
+	background-color: black;
+	color: white;
+	font-size: 20px;
+	padding: 1px 1px 1px 20px;
+	font-family: "Source Sans Pro", sans-serif;
+}

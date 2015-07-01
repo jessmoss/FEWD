@@ -1,0 +1,32 @@
+body {
+background: #4D4D4D;
+border: 3px solid #828282;
+color: white;
+margin: 20px;
+padding: 20px;
+
+}
+
+h1 {
+
+font-style: italic;
+text-align: center;
+
+}
+
+nav {
+
+	font-weight: bold;
+	text-align: center;
+
+}
+
+hr {
+
+	margin: 20px;
+}
+
+h3{
+
+	text-transform: uppercase;
+}

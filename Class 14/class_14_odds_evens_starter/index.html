@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Color Switcher</title>
+
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+  <h1>Odds or Evens</h1>
+  <table>
+    <tr>
+      <td class="player-a">
+        <h2>Player A (odds)</h2>
+        <button data-amount="1" data-player="A">1</button>
+        <br/>
+        <button data-amount="2" data-player="A">2</button>
+        <h3>Score</h3>
+        <div id="scoreA">0</div>
+      </td>
+      <td>
+        <h2>Winner</h2>
+        <div id="winner"></div>
+      </td>
+      <td class="player-b">
+        <h2>Player B (evens)</h2>
+        <button data-amount="1" data-player="B">1</button>
+        <br/>
+        <button data-amount="2" data-player="B">2</button>
+        <h3>Score</h3>
+        <div id="scoreB">0</div>
+      </td>
+    </tr>
+  </table>
+
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/odds-evens.js"></script>
+
+</body>
+
+</html>
